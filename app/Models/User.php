@@ -20,7 +20,7 @@ class User extends Authenticatable
     protected $guarded = ['id'];
 
     // Relazione uno a molti con la tabella apartments
-    public function apartments(){
+    public function apartments() {
         return $this->hasMany(Apartment::class);
     }
 

@@ -12,7 +12,7 @@ class Message extends Model
     protected $guarded = ['id'];
 
     // Relazione molti a uno con la tabella apartments
-    public function apartment(){
+    public function apartment() {
         return $this->belongsTo(Apartment::class);
     }
 }

@@ -12,7 +12,7 @@ class Service extends Model
     protected $guarded = ['id'];
 
     // Relazione molti a molti con la tabella apartments
-    public function apartments(){
+    public function apartments() {
         return $this->belongsToMany(Apartment::class);
     }
 }
