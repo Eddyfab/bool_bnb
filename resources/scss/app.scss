@@ -1,1 +1,6 @@
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+@import './partials/header.scss';
+
+main{
+  height: calc(100vh - 70px);
+}
