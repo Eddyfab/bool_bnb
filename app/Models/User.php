@@ -17,13 +17,12 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'name',
-        'surname',
-        'email',
-        'password',
-        'date_of_birth'
-    ];
+    protected $guarded = ['id'];
+
+    // Relazione uno a molti con la tabella apartments
+    public function apartments(){
+        return $this->hasMany(Apartment::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.
