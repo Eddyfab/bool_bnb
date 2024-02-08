@@ -13,7 +13,7 @@ return new class extends Migration
     {
         // Aggiornamento della tabella views
         Schema::table('views', function(Blueprint $table) {
-            $table->tinyInteger('apartment_id')->unsigned()->after('id');
+            $table->bigInteger('apartment_id')->unsigned()->after('id');
             $table->foreign('apartment_id')->references('id')->on('apartments')->cascadeOnDelete();
         });
     }

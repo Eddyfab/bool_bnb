@@ -13,7 +13,7 @@ return new class extends Migration
     {
         // Aggiornamento della tabella apartments, aggiunta relazione tra apartment e user
         Schema::table('apartments', function (Blueprint $table) {
-            $table->tinyInteger('user_id')->unsigned()->after('id');
+            $table->bigInteger('user_id')->unsigned()->after('id');
             $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete();
         });
     }

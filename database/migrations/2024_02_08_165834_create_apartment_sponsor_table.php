@@ -13,10 +13,10 @@ return new class extends Migration
     {
         // Creazione della tabella in relazione tra apartment e sponsor
         Schema::create('apartment_sponsor', function (Blueprint $table) {
-            $table->tinyInteger('apartment_id')->unsigned();
+            $table->bigInteger('apartment_id')->unsigned();
             $table->foreign('apartment_id')->references('id')->on('apartments')->cascadeOnDelete();
 
-            $table->tinyInteger('sponsor_id')->unsigned();
+            $table->bigInteger('sponsor_id')->unsigned();
             $table->foreign('sponsor_id')->references('id')->on('sponsors')->cascadeOnDelete();
 
             $table->date('transaction_date');

@@ -13,10 +13,10 @@ return new class extends Migration
     {
         // Creazione della tabella in relazione tra apartment e service
         Schema::create('apartment_service', function (Blueprint $table) {
-            $table->tinyInteger('apartment_id')->unsigned();
+            $table->bigInteger('apartment_id')->unsigned();
             $table->foreign('apartment_id')->references('id')->on('apartments')->cascadeOnDelete();
 
-            $table->tinyInteger('service_id')->unsigned();
+            $table->bigInteger('service_id')->unsigned();
             $table->foreign('service_id')->references('id')->on('services')->cascadeOnDelete();
         });
     }
